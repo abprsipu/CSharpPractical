@@ -1,0 +1,29 @@
+// Write a program that picks a random number between 1 and 10. Give the user 4 chances to guess the number. If the user guesses the number, display “You won"; otherwise, display “You lost".
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        var number = new Random();
+        int secertNumber =number.Next(1,10);
+        Console.WriteLine(secertNumber);
+        Console.WriteLine("Random number is selected..");
+        
+        for(int i  =1; i<=4;i++){
+            Console.WriteLine("Take a guess ");
+            int intTemp = Convert.ToInt32(Console.ReadLine());
+            if(intTemp== secertNumber)
+            {
+                Console.WriteLine("YOU WON!");
+                break;
+            }else
+            {
+                Console.WriteLine(4-i+" guess remaining");
+            }
+            
+        }
+        
+        
+    }
+}
