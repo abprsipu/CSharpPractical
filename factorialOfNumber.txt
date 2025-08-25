@@ -1,0 +1,29 @@
+ Write a program and ask the user to enter a number. Compute the factorial of the number and print it on the console. For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        // Console.WriteLine("Enter the number you want to create factorial for ");
+        // int intTemp = Convert.ToInt32(Console.ReadLine());
+        // var fact =1;
+        // for(int i =1;i<=intTemp;i++)
+        // {
+        //     fact*=i;
+        // }
+        // Console.WriteLine("Factorial of entered number is "+fact);
+        Console.WriteLine("Enter the number to find the factorial :");
+        var intTemp = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Factorial of enterd number using recurssion is :"FactorialOfNumber(intTemp));
+        
+    }
+    public static int FactorialOfNumber(int number){
+        if(number ==0|| number==1 )
+        {
+            return 1;
+        }
+        return number*FactorialOfNumber(number-1);
+        
+    }
+}
