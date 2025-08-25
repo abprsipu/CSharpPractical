@@ -1,0 +1,49 @@
+// Write a program and continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers and display it on the console.
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Try programiz.pro");
+        var sum =0;
+        do{
+            Console.WriteLine("Enter a number");
+            var input = Console.ReadLine();
+            sum+=int.Parse(input);
+            
+        }while(!input.Equals("ok"));
+        Console.WriteLine(sum);
+    }
+}
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Try programiz.pro");
+        int sum = 0;
+        string input;
+
+        while (true)
+        {
+            Console.WriteLine("Enter a number or type 'ok' to exit:");
+            input = Console.ReadLine();
+
+            if (input.ToLower() == "ok")
+                break;
+
+            if (int.TryParse(input, out int number))
+            {
+                sum += number;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+            }
+        }
+
+        Console.WriteLine("Sum of entered numbers: " + sum);
+    }
+}
