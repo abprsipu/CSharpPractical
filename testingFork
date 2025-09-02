@@ -1,0 +1,15 @@
+using System;
+
+namespace MyApp// helps to logically group related classes.
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            var a = 4;
+            Console.WriteLine("Entered number is "+ a);
+            Console.WriteLine($"Entered number is {a}");
+        }
+    }
+}
